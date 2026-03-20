@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CandleBot"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chargement..."
+            android:textSize="13sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="12dp"/>
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginBottom="12dp"
+            android:background="#1A1A1A"/>
+        <Button
+            android:id="@+id/btnAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Activer le service de clic automatique"
+            android:textSize="13sp"
+            android:backgroundTint="#2A2A2A"
+            android:textColor="#E24B4A"
+            android:layout_marginBottom="8dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Seuil" android:textColor="#AAAAAA" android:textSize="13sp"/>
+            <SeekBar android:id="@+id/seekThreshold" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"/>
+            <TextView android:id="@+id/tvThresholdVal" android:layout_width="30dp" android:layout_height="wrap_content" android:text="10" android:textColor="#FFFFFF" android:textSize="13sp" android:gravity="end"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Sensibilite" android:textColor="#AAAAAA" android:textSize="13sp"/>
+            <SeekBar android:id="@+id/seekSensitivity" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2"/>
+            <TextView android:id="@+id/tvSensitivityVal" android:layout_width="30dp" android:layout_height="wrap_content" android:text="3" android:textColor="#FFFFFF" android:textSize="13sp" android:gravity="end"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp" android:weightSum="2">
+            <Button android:id="@+id/btnStart" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="Demarrer" android:backgroundTint="#639922" android:textColor="#FFFFFF" android:layout_marginEnd="6dp"/>
+            <Button android:id="@+id/btnStop" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:text="Arreter" android:backgroundTint="#E24B4A" android:textColor="#FFFFFF" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp" android:weightSum="2">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="#1A1A1A" android:padding="12dp" android:layout_marginEnd="6dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bougies rouges" android:textColor="#888888" android:textSize="11sp"/>
+                <TextView android:id="@+id/tvRedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#E24B4A" android:textSize="28sp" android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="#1A1A1A" android:padding="12dp" android:layout_marginStart="6dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BUY declenches" android:textColor="#888888" android:textSize="11sp"/>
+                <TextView android:id="@+id/tvBuyCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#639922" android:textSize="28sp" android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Journal" android:textColor="#666666" android:textSize="11sp" android:layout_marginBottom="4dp"/>
+        <TextView android:id="@+id/tvLog" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="120dp" android:background="#111111" android:padding="10dp" android:textColor="#AAAAAA" android:textSize="11sp" android:fontFamily="monospace" android:text="[ Systeme pret ]"/>
+    </LinearLayout>
+</ScrollView>

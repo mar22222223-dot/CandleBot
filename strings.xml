@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CandleBot</string>
+    <string name="accessibility_description">CandleBot effectue des clics automatiques sur le bouton Buy quand 10 bougies rouges sont détectées sur votre graphique de trading.</string>
+</resources>
